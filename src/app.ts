@@ -1,5 +1,7 @@
 import fastify from 'fastify';
 import { Server } from 'http';
+import { db } from './database';
+import { Categories } from './database/schema';
 
 class SetupApplication {
     private server?: Server;
@@ -14,7 +16,13 @@ class SetupApplication {
         this.setupRoutes();
     }
 
-    private async setupFastify() {}
+    private async setupFastify() {
+        await db.insert(Categories).values({
+            name: 'Test',
+            description: 'Description test akkaak',
+        });
+        console.log('criou!');
+    }
 
     private setupRoutes() {}
 
