@@ -17,6 +17,7 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.14.0",
+    "drizzle-kit": "0.22.2",
     "eslint": "^8.0.0",
     "tsup": "^8.1.0",
     "tsx": "^4.11.2",

@@ -19,7 +19,7 @@ CREATE TABLE `products` (
 CREATE TABLE `suppliers` (
 	`id_supplier` int AUTO_INCREMENT NOT NULL,
 	`name` varchar(255) NOT NULL,
-	`contact` varchar(255),
+	`email` varchar(255),
 	CONSTRAINT `suppliers_id_supplier` PRIMARY KEY(`id_supplier`)
 );
 --> statement-breakpoint

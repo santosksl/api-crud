@@ -10,7 +10,7 @@ import {
 export const suppliers = mysqlTable('suppliers', {
     id: int('id_supplier').autoincrement().primaryKey(),
     name: varchar('name', { length: 255 }).notNull(),
-    contact: varchar('contact', { length: 255 }),
+    email: varchar('email', { length: 255 }),
 });
 
 export const categories = mysqlTable('categories', {
