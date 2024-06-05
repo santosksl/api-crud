@@ -2,7 +2,7 @@ import { db } from '@/database';
 import { products } from '@/database/schema';
 import { IProductDTO } from '@/repositories/IProductRepository';
 import { eq, sql } from 'drizzle-orm';
-import { ProductDoesNotExistError } from './errors';
+import { ProductDoesNotExistError } from '../errors';
 
 interface IProductSQLRequest {
     name: string;
@@ -58,3 +58,4 @@ class UpdateProductUseCase {
 }
 
 export { UpdateProductUseCase };
+

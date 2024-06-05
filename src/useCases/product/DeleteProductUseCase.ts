@@ -1,7 +1,7 @@
 import { db } from '@/database';
 import { products } from '@/database/schema';
 import { eq } from 'drizzle-orm';
-import { ProductDoesNotExistError } from './errors';
+import { ProductDoesNotExistError } from '../errors';
 
 class DeleteProductUseCase {
     async execute(id: number) {
@@ -19,3 +19,4 @@ class DeleteProductUseCase {
 }
 
 export { DeleteProductUseCase };
+

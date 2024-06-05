@@ -2,7 +2,7 @@ import { db } from '@/database';
 import { suppliers } from '@/database/schema';
 import { ISupplierDTO } from '@/repositories/ISupplierRepository';
 import { eq } from 'drizzle-orm';
-import { SupplierAlreadyExistsError } from './errors';
+import { SupplierAlreadyExistsError } from '../errors/';
 
 class CreateSupplierUseCase {
     async execute({ name, email }: ISupplierDTO) {

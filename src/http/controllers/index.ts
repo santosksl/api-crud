@@ -3,11 +3,12 @@ import { CreateProductUseCase } from '@/useCases/CreateProductUseCase';
 import { CreateSupplierUseCase } from '@/useCases/CreateSupplierUseCase';
 import { DeleteProductUseCase } from '@/useCases/DeleteProductUseCase';
 import { UpdateProductUseCase } from '@/useCases/UpdateProductUseCase';
-import { CreateCategoryController } from './CreateCategoryController';
-import { CreateProductController } from './CreateProductController';
-import { CreateSupplierController } from './CreateSupplierController';
-import { DeleteProductController } from './DeleteProductController';
-import { UpdateProductController } from './UpdateProductController';
+
+import { CreateCategoryController } from './category/CreateCategoryController';
+import { CreateProductController } from './product/CreateProductController';
+import { DeleteProductController } from './product/DeleteProductController';
+import { UpdateProductController } from './product/UpdateProductController';
+import { CreateSupplierController } from './supplier/CreateSupplierController';
 
 const createCategoryUseCase = new CreateCategoryUseCase();
 const createCategoryController = new CreateCategoryController(

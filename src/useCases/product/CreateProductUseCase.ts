@@ -6,7 +6,7 @@ import {
     CategoryDoesNotExistError,
     ProductAlreadyExistsError,
     SupplierDoesNotExistError,
-} from './errors';
+} from '../errors';
 
 class CreateProductUseCase {
     async execute({
@@ -47,3 +47,4 @@ class CreateProductUseCase {
 }
 
 export { CreateProductUseCase };
+

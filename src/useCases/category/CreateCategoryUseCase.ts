@@ -2,7 +2,7 @@ import { db } from '@/database';
 import { categories } from '@/database/schema';
 import { ICategoryDTO } from '@/repositories/ICategoryRepository';
 import { eq } from 'drizzle-orm';
-import { CategoryAlreadyExistsError } from './errors/';
+import { CategoryAlreadyExistsError } from '../errors/';
 
 /* interface CategoryUseCaseResponse {
     data: ICategoryDTO;
