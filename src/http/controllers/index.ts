@@ -1,6 +1,8 @@
 import { CreateCategoryUseCase } from '@/useCases/CreateCategoryUseCase';
+import { CreateProductUseCase } from '@/useCases/CreateProductUseCase';
 import { CreateSupplierUseCase } from '@/useCases/CreateSupplierUseCase';
 import { CreateCategoryController } from './CreateCategoryController';
+import { CreateProductController } from './CreateProductController';
 import { CreateSupplierController } from './CreateSupplierController';
 
 const createCategoryUseCase = new CreateCategoryUseCase();
@@ -13,4 +15,13 @@ const createSupplierController = new CreateSupplierController(
     createSupplierUseCase,
 );
 
-export { createCategoryController, createSupplierController };
+const createProductUseCase = new CreateProductUseCase();
+const createProductController = new CreateProductController(
+    createProductUseCase,
+);
+
+export {
+    createCategoryController,
+    createProductController,
+    createSupplierController,
+};

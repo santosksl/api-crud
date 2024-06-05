@@ -4,10 +4,33 @@ class CategoryAlreadyExistsError extends Error {
     }
 }
 
-class SupplierAlreadyExistsError extends Error {
+class CategoryDoesNotExistError extends Error {
     constructor() {
-        super('❌ E-mail already exists!');
+        super('❌ This category does not exist!');
     }
 }
 
-export { CategoryAlreadyExistsError, SupplierAlreadyExistsError };
+class SupplierDoesNotExistError extends Error {
+    constructor() {
+        super('❌ This supplier does not exist!');
+    }
+}
+
+class SupplierAlreadyExistsError extends Error {
+    constructor() {
+        super('❌ Supplier already exists!');
+    }
+}
+
+class ProductAlreadyExistsError extends Error {
+    constructor() {
+        super('❌ Product already exists!');
+    }
+}
+export {
+    CategoryAlreadyExistsError,
+    CategoryDoesNotExistError,
+    ProductAlreadyExistsError,
+    SupplierAlreadyExistsError,
+    SupplierDoesNotExistError,
+};
