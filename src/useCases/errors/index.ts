@@ -27,10 +27,18 @@ class ProductAlreadyExistsError extends Error {
         super('❌ Product already exists!');
     }
 }
+
+class ProductDoesNotExistError extends Error {
+    constructor() {
+        super('❌ This product does not exist!');
+    }
+}
+
 export {
     CategoryAlreadyExistsError,
     CategoryDoesNotExistError,
     ProductAlreadyExistsError,
+    ProductDoesNotExistError,
     SupplierAlreadyExistsError,
     SupplierDoesNotExistError,
 };
