@@ -7,43 +7,43 @@ import {
     varchar,
 } from 'drizzle-orm/mysql-core';
 
-export const Suppliers = mysqlTable('suppliers', {
+export const suppliers = mysqlTable('suppliers', {
     id: int('id_supplier').autoincrement().primaryKey(),
     name: varchar('name', { length: 255 }).notNull(),
     contact: varchar('contact', { length: 255 }),
 });
 
-export const Categories = mysqlTable('categories', {
+export const categories = mysqlTable('categories', {
     id: int('id_category').autoincrement().primaryKey(),
     name: varchar('name', { length: 255 }).notNull(),
     description: text('description'),
 });
 
-export const Products = mysqlTable('products', {
+export const products = mysqlTable('products', {
     id: int('id_product').autoincrement().primaryKey(),
     name: varchar('name', { length: 255 }).notNull(),
     description: text('description'),
     amount: int('amount').notNull(),
     price: decimal('price', { precision: 10, scale: 2 }).notNull(),
-    supplierId: int('id_supplier').references(() => Suppliers.id),
-    categoryId: int('id_category').references(() => Categories.id),
+    supplierId: int('id_supplier').references(() => suppliers.id),
+    categoryId: int('id_category').references(() => categories.id),
 });
 
-export const suppliersRelations = relations(Suppliers, ({ many }) => ({
-    products: many(Products),
+export const suppliersRelations = relations(suppliers, ({ many }) => ({
+    products: many(products),
 }));
 
-export const categoriesRelations = relations(Categories, ({ many }) => ({
-    products: many(Products),
+export const categoriesRelations = relations(categories, ({ many }) => ({
+    products: many(products),
 }));
 
-export const productsRelations = relations(Products, ({ one }) => ({
-    supplier: one(Suppliers, {
-        fields: [Products.supplierId],
-        references: [Suppliers.id],
+export const productsRelations = relations(products, ({ one }) => ({
+    supplier: one(suppliers, {
+        fields: [products.supplierId],
+        references: [suppliers.id],
     }),
-    category: one(Categories, {
-        fields: [Products.categoryId],
-        references: [Categories.id],
+    category: one(categories, {
+        fields: [products.categoryId],
+        references: [categories.id],
     }),
 }));

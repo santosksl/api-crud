@@ -1,7 +1,8 @@
+import { migrate } from 'drizzle-orm/mysql2/migrator';
 import fastify from 'fastify';
 import { Server } from 'http';
 import { db } from './database';
-import { Categories } from './database/schema';
+import { Routes } from './http/routes';
 
 class SetupApplication {
     private server?: Server;
@@ -17,14 +18,12 @@ class SetupApplication {
     }
 
     private async setupFastify() {
-        await db.insert(Categories).values({
-            name: 'Test',
-            description: 'Description test akkaak',
-        });
-        console.log('criou!');
+        await migrate(db, { migrationsFolder: './drizzle' });
     }
 
-    private setupRoutes() {}
+    private setupRoutes() {
+        Routes.RegisterRoutes(this.app);
+    }
 
     public startApplication() {
         this.app
