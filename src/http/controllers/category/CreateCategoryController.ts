@@ -1,4 +1,4 @@
-import { CreateCategoryUseCase } from '@/useCases/CreateCategoryUseCase';
+import { CreateCategoryUseCase } from '@/useCases/category/CreateCategoryUseCase';
 import { CategoryAlreadyExistsError } from '@/useCases/errors/';
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { z } from 'zod';

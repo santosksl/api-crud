@@ -58,4 +58,3 @@ class UpdateProductUseCase {
 }
 
 export { UpdateProductUseCase };
-

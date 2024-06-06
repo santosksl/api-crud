@@ -4,6 +4,7 @@ import {
     createProductController,
     createSupplierController,
     deleteProductController,
+    findProductController,
     updateProductController,
 } from '../controllers';
 
@@ -26,6 +27,10 @@ async function crudRoutes(fastify: FastifyInstance) {
 
     fastify.delete('/product/:id', async (request, reply) => {
         await deleteProductController.handle(request, reply);
+    });
+
+    fastify.get('/product/:category', async (request, reply) => {
+        await findProductController.handle(request, reply);
     });
 }
 

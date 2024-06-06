@@ -1,4 +1,4 @@
-import { CreateProductUseCase } from '@/useCases/CreateProductUseCase';
+import { CreateProductUseCase } from '@/useCases/product/CreateProductUseCase';
 import {
     CategoryDoesNotExistError,
     SupplierDoesNotExistError,

@@ -1,5 +1,5 @@
-import { CreateSupplierUseCase } from '@/useCases/CreateSupplierUseCase';
 import { SupplierAlreadyExistsError } from '@/useCases/errors';
+import { CreateSupplierUseCase } from '@/useCases/supplier/CreateSupplierUseCase';
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { z } from 'zod';
 

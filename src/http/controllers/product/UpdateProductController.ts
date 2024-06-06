@@ -1,5 +1,5 @@
-import { UpdateProductUseCase } from '@/useCases/UpdateProductUseCase';
 import { ProductDoesNotExistError } from '@/useCases/errors/';
+import { UpdateProductUseCase } from '@/useCases/product/UpdateProductUseCase';
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { z } from 'zod';
 
@@ -42,7 +42,7 @@ class UpdateProductController {
                     categoryId,
                 });
 
-            return reply.status(201).send({
+            return reply.status(200).send({
                 message: '✔️ Product updated successfully',
                 previousProduct,
                 updatedProduct,

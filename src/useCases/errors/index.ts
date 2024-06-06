@@ -34,9 +34,16 @@ class ProductDoesNotExistError extends Error {
     }
 }
 
+class InvalidCategoryParamsError extends Error {
+    constructor() {
+        super('❌ Invalid category parameters!');
+    }
+}
+
 export {
     CategoryAlreadyExistsError,
     CategoryDoesNotExistError,
+    InvalidCategoryParamsError,
     ProductAlreadyExistsError,
     ProductDoesNotExistError,
     SupplierAlreadyExistsError,
