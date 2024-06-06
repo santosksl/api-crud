@@ -1,8 +1,8 @@
-import { CreateCategoryUseCase } from '@/useCases/CreateCategoryUseCase';
-import { CreateProductUseCase } from '@/useCases/CreateProductUseCase';
-import { CreateSupplierUseCase } from '@/useCases/CreateSupplierUseCase';
-import { DeleteProductUseCase } from '@/useCases/DeleteProductUseCase';
-import { UpdateProductUseCase } from '@/useCases/UpdateProductUseCase';
+import { CreateCategoryUseCase } from '@/useCases/category/CreateCategoryUseCase';
+import { CreateProductUseCase } from '@/useCases/product/CreateProductUseCase';
+import { CreateSupplierUseCase } from '@/useCases/supplier/CreateSupplierUseCase';
+import { DeleteProductUseCase } from '@/useCases/product/DeleteProductUseCase';
+import { UpdateProductUseCase } from '@/useCases/product/UpdateProductUseCase';
 
 import { CreateCategoryController } from './category/CreateCategoryController';
 import { CreateProductController } from './product/CreateProductController';
