@@ -24,6 +24,7 @@
     "typescript": "5.4.5"
   },
   "dependencies": {
+    "@fastify/cors": "9.0.1",
     "dotenv": "^16.4.5",
     "drizzle-orm": "0.31.1",
     "fastify": "^4.27.0",
