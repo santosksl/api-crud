@@ -13,7 +13,7 @@ class DeleteProductController {
 
         try {
             await this.deleteProductUseCase.execute(id);
-            return reply.status(200).send({ message: '✔️ Product deleted!' });
+            return reply.status(200).send({ message: 'Product deleted!' });
         } catch (err) {
             if (err instanceof ProductDoesNotExistError) {
                 return reply.status(409).send({ message: err.message });

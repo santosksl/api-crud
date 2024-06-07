@@ -43,7 +43,7 @@ class UpdateProductController {
                 });
 
             return reply.status(200).send({
-                message: '✔️ Product updated successfully',
+                message: 'Product updated successfully',
                 previousProduct,
                 updatedProduct,
             });

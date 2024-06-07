@@ -21,7 +21,7 @@ class CreateCategoryController {
             await this.createCategoryUseCase.execute({ name, description });
             return reply
                 .status(201)
-                .send({ message: '✔️  Category created successfully' });
+                .send({ message: 'Category created successfully' });
         } catch (err) {
             if (err instanceof CategoryAlreadyExistsError) {
                 return reply.status(409).send({ message: err.message });

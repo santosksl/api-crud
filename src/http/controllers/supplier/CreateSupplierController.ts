@@ -20,7 +20,7 @@ class CreateSupplierController {
             await this.createSupplierUseCase.execute({ name, email });
             return reply
                 .status(201)
-                .send({ message: '✔️  Supplier created successfully' });
+                .send({ message: 'Supplier created successfully' });
         } catch (err) {
             if (err instanceof SupplierAlreadyExistsError) {
                 return reply.status(409).send({ message: err.message });

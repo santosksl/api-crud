@@ -44,7 +44,7 @@ class CreateProductController {
             });
             return reply
                 .status(201)
-                .send({ message: '✔️  Product created successfully' });
+                .send({ message: 'Product created successfully' });
         } catch (err) {
             if (err instanceof SupplierDoesNotExistError) {
                 return reply.status(409).send({ message: err.message });
